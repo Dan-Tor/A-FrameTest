@@ -3,6 +3,9 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <!--<script src="https://rawgit.com/rdub80/aframe-shake2show-component/master/dist/aframe-shake2show-component.min.js"></script>-->
+<!--This is the speech component-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+   <script src="aframe-speech-command-component.js"></script>
   </head>
   <body>
     <a-scene>
@@ -14,6 +17,11 @@
       //Proof of Concept with images. This is an image of a ketchup bottle
       <a-image position ="2 0.6 -1.4" src="https://images-na.ssl-images-amazon.com/images/I/31jiHm94pwL.jpg"></a-image>
       <a-sky color="#ECECEC"></a-sky>
+      <a-entity id="menu"
+              speech-command__show="command: show menu; type: attribute; attribute: visible; value: true;"
+              speech-command__hide="command: hide menu; type: attribute; attribute: visible; value: false;">
+            
+</a-entity>
 
   	<!--<a-entity shake2show visible="false"></a-entity>-->
   	<!--<a-entity camera look-controls></a-entity>-->
