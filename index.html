@@ -1,6 +1,9 @@
 <html>
 <!--This is an A-Frame quick start, with simple components and other additions to help people
 get started as fast as possible -->
+<!-- Theres more information in the original A-Frame Documentation
+https://aframe.io/docs/0.7.0/introduction/
+-->
   <head>
     <!--This is the main A-Frame Library-->
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
@@ -13,6 +16,10 @@ get started as fast as possible -->
   </head>
   <body>
     <a-scene> <!--A-Frame components always start and end with <a-scene><\a-scene> tags-->
+      <!--Camera w/ Cursor-->
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
       <!--These are A-Frame primitives
       positioning is done (x,y,z) but you can open the live editor  CTRL + ALT + i
       With the live editor you can move around elements and see their specific stats on the side,
@@ -21,11 +28,16 @@ get started as fast as possible -->
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="8" height="8" color="#7BC8A4"></a-plane>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-icosahedron position = "3 0.6 -4" radius = "1" color="#FF926B" radius="5"></a-icosahedron>
+      <a-dodecahedron position = "-3 0.6 -4" color="#FF322B" radius="1"></a-dodecahedron>
       <a-text position ="-2 0.6 -1.4" value="Hello World "></a-text>
       <a-sky color="#ECECEC"></a-sky>
       <!--Proof of Concept with images. This is an image of a ketchup bottle-->
       <a-image position ="2 0.6 -1.4" src="https://images-na.ssl-images-amazon.com/images/I/31jiHm94pwL.jpg"></a-image>
+      <!--This is a box with a hyperlink attached to it. Clicking any where on the box will send you to the desired link
+    link position will bind to object, this way it avoids spawning two links-->
+      <a-link href="https://aframe.io/" position="-2 0.3 -7" title ="Click Here"><a-box width="2" height="2" color="#3333D9"></a-box></a-link>
       <!--This is shake component-->
       <a-entity shake2show visible="false">
         <a-text position ="-2 0.6 -1.4" value="SHAKE SHAKE"></a-text>
@@ -33,6 +45,7 @@ get started as fast as possible -->
       </a-entity>
     <!--END OF SHAKE-->
 
+<!--At the moment, this section doesn't seem to work. Ignore it for now-->
             <!-- <a-entity id="menu"
               speech-command__show="command: show menu; type: attribute; attribute: visible; value: true;"
               speech-command__hide="command: hide menu; type: attribute; attribute: visible; value: false;">
