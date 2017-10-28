@@ -17,9 +17,6 @@ https://aframe.io/docs/0.7.0/introduction/
   <body>
     <a-scene> <!--A-Frame components always start and end with <a-scene><\a-scene> tags-->
       <!--Camera w/ Cursor-->
-      <a-assets>
-          <a-asset-item id="pkmn02" src="/collada_Models/ivysaurModel/Ivysaur_Dae/Pokemon.dae"></a-asset-item>
-        </a-assets>
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
@@ -35,14 +32,16 @@ https://aframe.io/docs/0.7.0/introduction/
       <a-icosahedron position = "3 0.6 -4" radius = "1" color="#FF926B" radius="5"></a-icosahedron>
       <a-dodecahedron position = "-3 0.6 -4" color="#FF322B" radius="1"></a-dodecahedron>
       <a-octahedron position = "-5 0 -5" color="#FF933B" radius="1"></a-octahedron>
+
+
       <a-text position ="-2 0.6 -1.4" value="Hello World "></a-text>
-      <a-collada-model src="#pkmn02" position = "-3 0.6 -1.4"></a-collada-model>
       <a-sky color="#ECECEC"></a-sky>
       <!--Proof of Concept with images. This is an image of Doge. Much WoW. Very Future-->
       <a-image position ="2 0.6 -1.4" src="https://t3.rbxcdn.com/11f67108660b44af34647f08a0dc960b"></a-image>
       <!--This is a box with a hyperlink attached to it. Clicking any where on the box will send you to the desired link
     link position will bind to object, this way it avoids spawning two links-->
       <a-link href="https://aframe.io/" position="4.5 0 1.5" rotation = " 0 90 0" title ="Click Here"><a-box width="2" height="2" color="#3333D9"></a-box></a-link>
+      <a-link href="video.html" position="-4.5 0 1.5" rotation = " 0 90 0" title ="Click Here"><a-sphere width="2" height="2" color="#F993D9"></a-sphere></a-link>
       <!--This is shake component-->
       <a-entity shake2show visible="false">
         <a-text position ="-2 0.6 -1.4" value="SHAKE SHAKE"></a-text>

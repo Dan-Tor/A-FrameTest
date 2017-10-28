@@ -1,0 +1,18 @@
+<html>
+<head>
+<title> A-FRAME Video Example <title>
+<!--This is the main A-Frame Library-->
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+  <a-assets>
+    <video id="doggo" autoplay loop="true" src="https://www.youtube.com/watch?v=5dbG4wqN0rQ"></video>
+  </a-assets>
+<a-link href="index.html" position="4.5 0 1.5" rotation = " 0 90 0" title ="Click Here"><a-box width="2" height="2" color="#3333D9"></a-box></a-link>
+<a-video src="#doggo" width="16" height="9" position="0 0 -20"></a-video>
+</a-scene>
+
+
+</body>
+</html>
