@@ -17,6 +17,9 @@ https://aframe.io/docs/0.7.0/introduction/
   <body>
     <a-scene> <!--A-Frame components always start and end with <a-scene><\a-scene> tags-->
       <!--Camera w/ Cursor-->
+      <a-assets>
+          <a-asset-item id="pkmn02" src="/collada_Models/ivysaurModel/Ivysaur_Dae/Pokemon.dae"></a-asset-item>
+        </a-assets>
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
@@ -31,7 +34,9 @@ https://aframe.io/docs/0.7.0/introduction/
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
       <a-icosahedron position = "3 0.6 -4" radius = "1" color="#FF926B" radius="5"></a-icosahedron>
       <a-dodecahedron position = "-3 0.6 -4" color="#FF322B" radius="1"></a-dodecahedron>
+      <a-octahedron position = "-5 0 -5" color="#FF933B" radius="1"></a-octahedron>
       <a-text position ="-2 0.6 -1.4" value="Hello World "></a-text>
+      <a-collada-model src="#pkmn02" position = "-3 0.6 -1.4"></a-collada-model>
       <a-sky color="#ECECEC"></a-sky>
       <!--Proof of Concept with images. This is an image of Doge. Much WoW. Very Future-->
       <a-image position ="2 0.6 -1.4" src="https://t3.rbxcdn.com/11f67108660b44af34647f08a0dc960b"></a-image>
@@ -44,14 +49,6 @@ https://aframe.io/docs/0.7.0/introduction/
         <a-box position="-1.5 0.5 -3" rotation="0 45 0" color="#ECC3D9"></a-box>
         <a-image position ="-1 0.5 3" src="https://t3.rbxcdn.com/11f67108660b44af34647f08a0dc960b"></a-image>
       </a-entity>
-<!--In Browser Testing for Shake-->
-      <script>
-        var triggerShake = document.createEvent("HTMLEvents");
-        triggerShake.initEvent("shake", true, true);
-        function shakeMe(){
-        document.dispatchEvent(triggerShake);
-        }
-    </script>
     <!--END OF SHAKE-->
 
 <!--At the moment, this section doesn't seem to work. Ignore it for now-->
@@ -60,6 +57,13 @@ https://aframe.io/docs/0.7.0/introduction/
               speech-command__hide="command: hide menu; type: attribute; attribute: visible; value: false;">
             </a-entity> -->
       </a-scene>
-
+      <!--In Browser Testing for Shake-->
+            <script>
+              var triggerShake = document.createEvent("HTMLEvents");
+              triggerShake.initEvent("shake", true, true);
+              function shakeMe(){
+              document.dispatchEvent(triggerShake);
+              }
+          </script>
   </body>
 </html>
