@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title> A-Frame Animations </title>
+  <!--https://aframe.io/docs/0.7.0/core/animations.html-->
+  <!--This is the main A-Frame Library-->
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+<!--Simple Rotation-->
+  <a-entity geometry="primitive: box" material="color: red">
+    <a-animation attribute="rotation"
+                 dur="10000"
+                 fill="forwards"
+                 to="0 360 0"
+                 repeat="indefinite"></a-animation>
+  </a-entity>
+
+<!--Simple back and forth-->
+  <a-entity geometry="primitive: octahedron" material="color: blue">
+    <a-animation attribute="position"
+    from="1 1 1"
+    to="2 4 -8"
+    repeat="indefinite"
+    ></a-animation>
+  </a-entity>
+
+
+
+
+
+    </a-scene>
+</body>
+</html>
