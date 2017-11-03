@@ -1,26 +1,11 @@
-<html>
-
-<head>
-  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/kripken/ammo.js/dcab07bf0e7f2b4b64c01dc45da846344c8f50be/builds/ammo.js"></script>
-  <script src="https://cdn.rawgit.com/takahirox/aframe-outline/v1.1.1/build/aframe-outline.min.js"></script>
-  <script src="https://cdn.rawgit.com/takahirox/a-mmd/v1.0.3/build/a-mmd.min.js"></script>
-</head>
-
-<body>
-  <a-scene antialias="true" outline>
-    <a-entity position="0 10 20">
-      <a-camera></a-camera>
-    </a-entity>
-
-    <a-entity mmd="audio:./audios/audio.mp3;">
-      <a-entity mmd-model="model:./models/model.pmd;
-                           vmd:./vmds/dance.vmd;"></a-entity>
-    </a-entity>
-
-    <a-light type="ambient" color="#888"></a-light>
-    <a-light color="#AAA" distance="100" intensity="0.4" type="point"></a-light>
-  </a-scene>
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='trackingMethod: best;'>
+      <a-anchor hit-testing-enabled='true'>
+   		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+      </a-anchor>
+		<a-camera-static/>
+	</a-scene>
 </body>
-
-</html>
